@@ -345,7 +345,7 @@ public class FloatingActionMenu {
         // Create an arc that starts from startAngle and ends at endAngle
         // in an area that is as large as 4*radius^2
         final Point center = getActionViewCenter();
-        RectF area = new RectF(center.x - radius, center.y - radius, center.x + radius, center.y + radius);
+        RectF area = new RectF(center.x - radius, center.y - (radius / 2), center.x + radius, center.y + (radius / 2));
 
         Path orbit = new Path();
         orbit.addArc(area, startAngle, endAngle - startAngle);
